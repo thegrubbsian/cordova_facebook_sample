@@ -1,0 +1,17 @@
+@mixin box_shadow($top, $left, $dist, $offset, $color, $inset: "") {
+  @if $inset != "" {
+    -webkit-box-shadow: $top $left $dist $offset $color inset;
+    -moz-box-shadow: $top $left $dist $offset $color inset;
+    -ms-box-shadow: $top $left $dist $offset $color inset;
+    -o-box-shadow: $top $left $dist $offset $color inset;
+    box-shadow: $top $left $dist $offset $color inset;
+  }
+  @if $inset == "" {
+    -webkit-box-shadow: $top $left $dist $offset $color;
+    -moz-box-shadow: $top $left $dist $offset $color;
+    -ms-box-shadow: $top $left $dist $offset $color;
+    -o-box-shadow: $top $left $dist $offset $color;
+    box-shadow: $top $left $dist $offset $color;
+  }
+  behavior: url('/PIE.htc');
+}

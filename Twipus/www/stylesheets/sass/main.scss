@@ -1,0 +1,50 @@
+@import "variables", "border_radius", "gradient", "box_shadow";
+
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: $page_background_color;
+  color: $default_font_color;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  height: 50px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  @include linear_gradient(#333, #222);
+  @include box_shadow(0px, 0px, 3px, 0px, #000);
+
+  img {
+    height: 40px;
+    margin-top: 5px;
+  }
+}
+
+#page {
+  height: 360px;
+  text-align: center;
+
+  .page {
+    margin: 5px;
+  }
+}
+
+#tabs {
+  display: none;
+  height: 50px;
+  background-color: #333;
+  text-align: center;
+}
+
+#sign_in_button {
+  background: #fff url('../images/twitter_logo.png') 8px 4px no-repeat;
+  padding-left: 25px;
+  color: #333;
+  padding: 5px 5px 5px 35px;
+  display: block;
+  width: 152px;
+  margin: 10px auto;
+  border: 3px solid #333;
+  @include border_radius(20px);
+}
